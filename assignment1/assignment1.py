@@ -98,34 +98,9 @@ def hangman(secret, guess):
         else:
             output += '_'
     return output
-
-#Task 10
-#def pig_latin(word):
-    #special_characters = 'aeiou'
-   # if word.startswith('qu'):
-    #    return word[2:] + 'quay'
-    #else:
-     #   if word.startswith('squ'):
-      #      return word[3:] + word[0] + 'quay'
-       # if word[0] in special_characters:
-        #    return word + 'ay'
-        #else:
-         #   for i in range(len(word)):
-          #      if word[i] in special_characters:
-           #         return word[i:] + word[:i] + 'ay'
-
-#def pig_latin(word):
- #   vowels = 'aeiou'
-  #  if word[:2] == 'qu':
-   #     return word[2:] + 'quay'
-    #if word[0] in vowels:
-     #   return word + 'ay'
-    #for i in range(len(word)):
-     #   if word[i] in vowels:
-      #      return word[i:] + word[:i] + 'ay'
     
 def pig_latin(sentence):
-    def convert_word(word):
+    def untranslated_word(word):
         vowels = "aeiou"
         if word[:2] == 'qu':
             return word[2:] + 'quay'
@@ -137,7 +112,7 @@ def pig_latin(sentence):
             if word[i] in vowels:
                 return word[i:] + word[:i] + 'ay'
     words = sentence.split()
-    pig_latin_words = [convert_word(word) for word in words]
+    pig_latin_words = [untranslated_word(word) for word in words]
     return ' '.join(pig_latin_words)   
     
 
