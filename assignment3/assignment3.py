@@ -23,12 +23,6 @@ task1_older.to_csv('employees.csv', index=False)
 task2_employees = pd.read_csv('employees.csv')
 print(task2_employees)
 
-additional_employees = [
-    {'Name': 'Eve', 'Age': 28, 'City': 'Miami', 'Salary': 60000},
-    {'Name': 'Frank', 'Age': 40, 'City': 'Seattle', 'Salary': 95000}
-]
-with open('additional_employees.json', 'w') as file:
-    json.dump(additional_employees, file)
 json_employees = pd.read_json('additional_employees.json')
 print(json_employees)
 
@@ -52,7 +46,7 @@ dirty_data = pd.read_csv('dirty_data.csv')
 print(dirty_data)
 
 clean_data = dirty_data.copy()
-clean_data = clean_data.drop_duplicates()
+clean_data.drop_duplicates(inplace=True)
 print(clean_data)
 
 clean_data['Age'] = pd.to_numeric(clean_data['Age'])
