@@ -1,0 +1,12 @@
+function: hello_world
+positional parameters: none
+keyword parameters: none
+return: None
+function: positional_args
+positional parameters: ('hello', 'world')
+keyword parameters: none
+return: True
+function: keyword_args
+positional parameters: none
+keyword parameters: {'first': 'hello', 'second': 'world'}
+function:  <function log_decorator at 0x0000023577F73BA0>
