@@ -1,0 +1,13 @@
+Website restricted sections include:
+disallow:
+/w/, /api/, /trap/, /wiki/Special:, /wiki/Spezial:, /wiki/Spesial:, /wiki/Special%31A, /wiki/Spezial%31A, /wiki/Spesial%31A
+
+User Agents:
+MJ12bot, Mediapartners-Google*
+disallow: /
+
+Not Allowed at all:
+UbiCrawler, DOC, Zao
+disallow: /.
+
+robot.txt files help communicate to bots what information is and is not accessible for a website. This is important for security reasons and so the website is not overloaded with data requests.

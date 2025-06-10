@@ -1,0 +1,1 @@
+I had trouble finding the specific nested elements for this task since they were deeply nested within other div elements.
